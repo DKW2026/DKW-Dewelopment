@@ -80,12 +80,12 @@ export default function Portfolio() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Podróż ku Doskonałości
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
             Odkryj nasze portfolio udanych projektów, które pokazują nasze zaangażowanie w jakość,
             innowacje i doskonałość w budownictwie
           </p>
@@ -93,17 +93,17 @@ export default function Portfolio() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 bg-white border-b">
+      <section className="py-8 bg-background border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setFilter(category.id)}
-                className={`px-6 py-2 rounded transition-colors ${
+                className={`px-6 py-2 rounded transition-colors font-medium ${
                   filter === category.id
-                    ? 'bg-yellow-400 text-gray-900'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-muted text-foreground hover:bg-muted/80'
                 }`}
               >
                 {category.label}
@@ -114,13 +114,13 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer"
               >
                 <div className="relative h-64 overflow-hidden">
                   <ImageWithFallback
@@ -131,14 +131,14 @@ export default function Portfolio() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-yellow-400 uppercase font-semibold">
+                    <span className="text-sm text-primary uppercase font-semibold">
                       {project.category === 'commercial' ? 'Komercyjne' : project.category === 'residential' ? 'Mieszkaniowe' : 'Infrastruktura'}
                     </span>
-                    <span className="text-sm text-gray-500">{project.year}</span>
+                    <span className="text-sm text-muted-foreground">{project.year}</span>
                   </div>
-                  <h3 className="text-xl mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="flex items-center text-sm text-gray-500">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <div className="flex items-center text-sm text-muted-foreground">
                     <svg
                       className="w-4 h-4 mr-2"
                       fill="none"
@@ -168,16 +168,16 @@ export default function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl mb-6">Od Koncepcji do Realizacji</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <h2 className="text-4xl font-bold mb-6">Od Koncepcji do Realizacji</h2>
+          <p className="text-xl text-muted-foreground mb-8">
             To są nasze osiągnięcia. Pozwól nam pomóc wcielić Twoją wizję w życie dzięki naszej wiedzy
             i zaangażowaniu.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-8 py-3 rounded hover:bg-yellow-500 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded hover:bg-primary/90 transition-colors font-medium"
           >
             Rozpocznij Swój Projekt
           </Link>

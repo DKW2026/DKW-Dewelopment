@@ -5,9 +5,9 @@ import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
 export const metadata: Metadata = {
   title: 'Profesjonalne Usługi Budowlane',
-  description: 'BuildNext - Kompleksowe usługi budowlane dla trwałego i innowacyjnego rozwoju. Budownictwo komercyjne, mieszkaniowe, renowacje i zarządzanie projektami. Ponad 400 zrealizowanych projektów.',
+  description: 'DKW DEVELOPMENT - Kompleksowe usługi budowlane dla trwałego i innowacyjnego rozwoju. Budownictwo komercyjne, mieszkaniowe, renowacje i zarządzanie projektami. Ponad 400 zrealizowanych projektów.',
   openGraph: {
-    title: 'BuildNext - Profesjonalne Usługi Budowlane',
+    title: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
     description: 'Kompleksowe usługi budowlane dla trwałego i innowacyjnego rozwoju. Ponad 400 projektów, 11 lat doświadczenia.',
   },
 };
@@ -65,17 +65,17 @@ export default function Home() {
     {
       name: 'Jan Kowalski',
       role: 'Dyrektor, Tech Corp',
-      content: 'BuildNext przekształcił naszą wizję w rzeczywistość. Ich dbałość o szczegóły i zaangażowanie w jakość są bezkonkurencyjne.',
+      content: 'DKW DEVELOPMENT przekształcił naszą wizję w rzeczywistość. Ich dbałość o szczegóły i zaangażowanie w jakość są bezkonkurencyjne.',
     },
     {
       name: 'Anna Nowak',
       role: 'Deweloper Nieruchomości',
-      content: 'Praca z BuildNext to czysta przyjemność. Ukończyli nasz projekt na czas i przekroczyli nasze oczekiwania.',
+      content: 'Praca z DKW DEVELOPMENT to czysta przyjemność. Ukończyli nasz projekt na czas i przekroczyli nasze oczekiwania.',
     },
     {
       name: 'Michał Wiśniewski',
       role: 'Właściciel Domu',
-      content: 'Nasz wymarzony dom stał się rzeczywistością dzięki BuildNext. Profesjonalizm, wydajność i prawdziwa troska.',
+      content: 'Nasz wymarzony dom stał się rzeczywistością dzięki DKW DEVELOPMENT. Profesjonalizm, wydajność i prawdziwa troska.',
     },
   ];
 
@@ -85,30 +85,30 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1762438441913-cd4ec8da39d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBleGNhdmF0b3IlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjYyMzI5MTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="/excav.jpg"
             alt="Construction site"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-primary/60" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl md:text-7xl mb-6">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-primary-foreground">
+          <h1 className="text-5xl md:text-7xl mb-6 font-bold">
             Budujemy Marzenia w Rzeczywistość
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200">
+          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
             Kompleksowy Zakres Usług dla Zrównoważonego i Innowacyjnego Rozwoju
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/portfolio"
-              className="bg-yellow-400 text-gray-900 px-8 py-3 rounded hover:bg-yellow-500 transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-primary-foreground text-primary px-8 py-3 rounded hover:bg-primary-foreground/90 transition-colors inline-flex items-center justify-center gap-2 font-medium"
             >
               Zobacz Projekty <ArrowRight size={20} />
             </Link>
             <Link
               href="/contact"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded hover:bg-white hover:text-gray-900 transition-colors"
+              className="bg-transparent border-2 border-primary-foreground text-primary-foreground px-8 py-3 rounded hover:bg-primary-foreground hover:text-primary transition-colors font-medium"
             >
               Uzyskaj Wycenę
             </Link>
@@ -117,11 +117,11 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Kompleksowy Zakres Usług</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Oferujemy pełen zakres usług budowlanych, aby spełnić wszystkie Twoje potrzeby
             </p>
           </div>
@@ -130,13 +130,13 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow"
+                className="p-6 bg-muted rounded-lg hover:shadow-lg transition-shadow"
               >
-                <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon size={24} className="text-gray-900" />
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+                  <service.icon size={24} className="text-primary" />
                 </div>
                 <h3 className="text-xl mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-muted-foreground">{service.description}</p>
               </div>
             ))}
           </div>
@@ -144,13 +144,13 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl mb-2 text-yellow-400">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-5xl mb-2 font-bold">{stat.value}</div>
+                <div className="text-primary-foreground/80">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -158,11 +158,11 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Spójrz na Nasze Najnowsze Projekty</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Odkryj nasze portfolio udanych projektów
             </p>
           </div>
@@ -177,8 +177,8 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                    <span className="text-yellow-400 text-sm mb-2">{project.category}</span>
-                    <h3 className="text-white text-2xl">{project.title}</h3>
+                    <span className="text-accent text-sm mb-2">{project.category}</span>
+                    <h3 className="text-primary-foreground text-2xl">{project.title}</h3>
                   </div>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-8 py-3 rounded hover:bg-yellow-500 transition-colors"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded hover:bg-primary/90 transition-colors font-medium"
             >
               Zobacz Wszystkie Projekty <ArrowRight size={20} />
             </Link>
@@ -197,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Co Mówią o Nas Nasi Klienci</h2>
@@ -205,22 +205,22 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
+              <div key={index} className="bg-card p-8 rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
+                      className="w-5 h-5 text-accent fill-current"
                       viewBox="0 0 20 20"
                     >
                       <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6">{testimonial.content}</p>
+                <p className="text-muted-foreground mb-6">{testimonial.content}</p>
                 <div>
-                  <div className="text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500">{testimonial.role}</div>
+                  <div className="text-foreground">{testimonial.name}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                 </div>
               </div>
             ))}
@@ -229,17 +229,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Zacznij Budować z Pewnością Już Dziś
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-primary-foreground/90 mb-8">
             Porozmawiajmy o Twoim kolejnym projekcie i wcielmy Twoją wizję w życie
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-8 py-3 rounded hover:bg-yellow-500 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-3 rounded hover:bg-primary-foreground/90 transition-colors font-medium"
           >
             Rozpocznij <ArrowRight size={20} />
           </Link>

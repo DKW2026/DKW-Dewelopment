@@ -2,19 +2,20 @@ import type { Metadata } from 'next';
 import { Toaster } from 'sonner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import { Poppins } from 'next/font/google'
 import './styles/index.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://buildnext.pl'),
   title: {
-    default: 'BuildNext - Profesjonalne Usługi Budowlane | Budownictwo Komercyjne i Mieszkaniowe',
-    template: '%s | BuildNext'
+    default: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane | Budownictwo Komercyjne i Mieszkaniowe',
+    template: '%s | DKW DEVELOPMENT'
   },
-  description: 'BuildNext to wiodąca firma budowlana specjalizująca się w budownictwie komercyjnym, mieszkaniowym oraz renowacjach. Ponad 400 zrealizowanych projektów i 11 lat doświadczenia.',
+  description: 'DKW DEVELOPMENT to wiodąca firma budowlana specjalizująca się w budownictwie komercyjnym, mieszkaniowym oraz renowacjach. Ponad 400 zrealizowanych projektów i 11 lat doświadczenia.',
   keywords: ['firma budowlana', 'budownictwo komercyjne', 'budownictwo mieszkaniowe', 'renowacje', 'zarządzanie projektami budowlanymi', 'budowa domów', 'budowa biurowców', 'usługi budowlane Polska'],
-  authors: [{ name: 'BuildNext' }],
-  creator: 'BuildNext',
-  publisher: 'BuildNext',
+  authors: [{ name: 'DKW DEVELOPMENT' }],
+  creator: 'DKW DEVELOPMENT',
+  publisher: 'DKW DEVELOPMENT',
   formatDetection: {
     email: false,
     address: false,
@@ -24,21 +25,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pl_PL',
     url: 'https://buildnext.pl',
-    siteName: 'BuildNext',
-    title: 'BuildNext - Profesjonalne Usługi Budowlane',
+    siteName: 'DKW DEVELOPMENT',
+    title: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
     description: 'Wiodąca firma budowlana w Polsce. Budownictwo komercyjne, mieszkaniowe i renowacje. Ponad 400 projektów, 11 lat doświadczenia.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'BuildNext - Profesjonalne Usługi Budowlane',
+        alt: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BuildNext - Profesjonalne Usługi Budowlane',
+    title: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
     description: 'Wiodąca firma budowlana w Polsce. Budownictwo komercyjne, mieszkaniowe i renowacje.',
     images: ['/og-image.jpg'],
   },
@@ -58,16 +59,21 @@ export const metadata: Metadata = {
   },
 };
 
+const poppins = Poppins({
+  subsets: ['latin-ext'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+})
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
+    <html lang="pl" className={poppins.className}>
       <head>
         <link rel="canonical" href="https://buildnext.pl" />
-      </head>
+       </head>
       <body>
         <div className="min-h-screen flex flex-col">
           <Navigation />

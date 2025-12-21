@@ -69,10 +69,10 @@ export default function Contact() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl mb-6">Skontaktuj się z Nami</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Skontaktuj się z Nami</h1>
+          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
             Gotowy do rozpoczęcia projektu budowlanego? Skontaktuj się z nami już dziś i porozmawiajmy o tym,
             jak możemy pomóc wcielić Twoją wizję w życie
           </p>
@@ -80,17 +80,17 @@ export default function Contact() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <info.icon size={28} className="text-gray-900" />
+              <div key={index} className="bg-muted p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <info.icon size={28} className="text-primary" />
                 </div>
-                <h3 className="text-lg mb-3">{info.title}</h3>
+                <h3 className="text-lg font-semibold mb-3">{info.title}</h3>
                 {info.details.map((detail, i) => (
-                  <p key={i} className="text-gray-600">
+                  <p key={i} className="text-muted-foreground">
                     {detail}
                   </p>
                 ))}
@@ -101,15 +101,15 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-3xl mb-6">Wyślij Nam Wiadomość</h2>
+            <div className="bg-card p-8 rounded-lg shadow-md">
+              <h2 className="text-3xl font-bold mb-6">Wyślij Nam Wiadomość</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm mb-2 text-gray-700">
+                  <label htmlFor="name" className="block text-sm mb-2 text-foreground">
                     Imię i Nazwisko *
                   </label>
                   <input
@@ -119,14 +119,14 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none"
                     placeholder="Jan Kowalski"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="email" className="block text-sm mb-2 text-gray-700">
+                    <label htmlFor="email" className="block text-sm mb-2 text-foreground">
                       Adres Email *
                     </label>
                     <input
@@ -136,13 +136,13 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none"
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none"
                       placeholder="jan@example.com"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm mb-2 text-gray-700">
+                    <label htmlFor="phone" className="block text-sm mb-2 text-foreground">
                       Numer Telefonu
                     </label>
                     <input
@@ -151,14 +151,14 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none"
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none"
                       placeholder="+48 555 123 456"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="projectType" className="block text-sm mb-2 text-gray-700">
+                  <label htmlFor="projectType" className="block text-sm mb-2 text-foreground">
                     Rodzaj Projektu *
                   </label>
                   <select
@@ -167,7 +167,7 @@ export default function Contact() {
                     value={formData.projectType}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none"
                   >
                     <option value="">Wybierz rodzaj projektu</option>
                     <option value="commercial">Budownictwo Komercyjne</option>
@@ -179,7 +179,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm mb-2 text-gray-700">
+                  <label htmlFor="message" className="block text-sm mb-2 text-foreground">
                     Wiadomość *
                   </label>
                   <textarea
@@ -189,7 +189,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none resize-none"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none resize-none"
                     placeholder="Opowiedz nam o swoim projekcie..."
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-yellow-400 text-gray-900 py-3 rounded-lg hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full bg-primary text-primary-foreground py-3 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-medium"
                 >
                   {isSubmitting ? (
                     <>
@@ -217,47 +217,47 @@ export default function Contact() {
             {/* Map / Additional Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl mb-6">Dlaczego Warto się z Nami Skontaktować?</h2>
+                <h2 className="text-3xl font-bold mb-6">Dlaczego Warto się z Nami Skontaktować?</h2>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <span className="text-gray-900">✓</span>
+                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                      <span className="text-primary">✓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg mb-1">Darmowa Konsultacja</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-lg font-semibold mb-1">Darmowa Konsultacja</h3>
+                      <p className="text-muted-foreground">
                         Uzyskaj profesjonalną poradę i wycenę projektu bez żadnych kosztów
                       </p>
                     </div>
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <span className="text-gray-900">✓</span>
+                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                      <span className="text-primary">✓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg mb-1">Szybka Odpowiedź</h3>
-                      <p className="text-gray-600">Zazwyczaj odpowiadamy w ciągu 24 godzin</p>
+                      <h3 className="text-lg font-semibold mb-1">Szybka Odpowiedź</h3>
+                      <p className="text-muted-foreground">Zazwyczaj odpowiadamy w ciągu 24 godzin</p>
                     </div>
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <span className="text-gray-900">✓</span>
+                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                      <span className="text-primary">✓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg mb-1">Przejrzyste Ceny</h3>
-                      <p className="text-gray-600">Jasne, szczegółowe wyceny bez ukrytych opłat</p>
+                      <h3 className="text-lg font-semibold mb-1">Przejrzyste Ceny</h3>
+                      <p className="text-muted-foreground">Jasne, szczegółowe wyceny bez ukrytych opłat</p>
                     </div>
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <span className="text-gray-900">✓</span>
+                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                      <span className="text-primary">✓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg mb-1">Doświadczony Zespół</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-lg font-semibold mb-1">Doświadczony Zespół</h3>
+                      <p className="text-muted-foreground">
                         Pracuj z ekspertami branżowymi o udokumentowanych osiągnięciach
                       </p>
                     </div>
@@ -266,8 +266,8 @@ export default function Contact() {
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
+              <div className="bg-muted h-80 rounded-lg flex items-center justify-center">
+                <div className="text-center text-muted-foreground">
                   <MapPin size={48} className="mx-auto mb-2" />
                   <p>Lokalizacja na Mapie</p>
                   <p className="text-sm">ul. Budowlana 123, Warszawa 00-001</p>
@@ -279,16 +279,16 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl mb-4">Często Zadawane Pytania</h2>
+            <h2 className="text-4xl font-bold mb-4">Często Zadawane Pytania</h2>
           </div>
 
           <div className="space-y-6">
             <div className="border-b pb-6">
-              <h3 className="text-xl mb-2">Jak długo trwa typowy projekt?</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2">Jak długo trwa typowy projekt?</h3>
+              <p className="text-muted-foreground">
                 Terminy projektów różnią się w zależności od zakresu i złożoności. Projekty mieszkaniowe
                 zazwyczaj trwają 3-6 miesięcy, podczas gdy projekty komercyjne mogą trwać 6-18 miesięcy.
                 Szczegółowe harmonogramy przedstawiamy podczas konsultacji.
@@ -296,24 +296,24 @@ export default function Contact() {
             </div>
 
             <div className="border-b pb-6">
-              <h3 className="text-xl mb-2">Czy oferujecie opcje finansowania projektów?</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2">Czy oferujecie opcje finansowania projektów?</h3>
+              <p className="text-muted-foreground">
                 Tak, współpracujemy z kilkoma partnerami finansowymi, aby pomóc uczynić Twój projekt
                 przystępnym cenowo. Skontaktuj się z nami, aby omówić dostępne opcje finansowania.
               </p>
             </div>
 
             <div className="border-b pb-6">
-              <h3 className="text-xl mb-2">Czy posiadacie licencje i ubezpieczenie?</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2">Czy posiadacie licencje i ubezpieczenie?</h3>
+              <p className="text-muted-foreground">
                 Oczywiście. Jesteśmy w pełni licencjonowani, kaucjonowani i ubezpieczeni. Możemy
                 dostarczyć kopie naszych dokumentów na żądanie.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl mb-2">Jakie obszary obsługujecie?</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2">Jakie obszary obsługujecie?</h3>
+              <p className="text-muted-foreground">
                 Głównie obsługujemy Warszawę i okolice, ale jesteśmy otwarci na omówienie
                 projektów w innych lokalizacjach indywidualnie.
               </p>

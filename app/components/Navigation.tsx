@@ -19,15 +19,15 @@ export default function Navigation() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-background shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-yellow-400 flex items-center justify-center">
-              <span className="text-2xl font-bold text-gray-900">C</span>
+            <div className="w-10 h-10 bg-accent flex items-center justify-center">
+              <span className="text-2xl font-bold text-primary">C</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">BuildNext</span>
+            <span className="text-xl font-bold text-foreground">DKW DEVELOPMENT</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -38,8 +38,8 @@ export default function Navigation() {
                 href={link.path}
                 className={`transition-colors ${
                   isActive(link.path)
-                    ? 'text-yellow-400 font-semibold'
-                    : 'text-gray-700 hover:text-yellow-400'
+                    ? 'text-accent-foreground font-semibold'
+                    : 'text-foreground hover:text-accent-foreground'
                 }`}
               >
                 {link.label}
@@ -47,7 +47,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="bg-yellow-400 text-gray-900 px-6 py-2 rounded hover:bg-yellow-500 transition-colors"
+              className="bg-accent text-primary px-6 py-2 rounded hover:brightness-90 transition-colors"
             >
               Wycena
             </Link>
@@ -74,8 +74,8 @@ export default function Navigation() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-4 py-2 transition-colors ${
                     isActive(link.path)
-                      ? 'text-yellow-400 font-semibold bg-gray-50'
-                      : 'text-gray-700 hover:text-yellow-400 hover:bg-gray-50'
+                      ? 'text-accent-foreground font-semibold bg-muted'
+                      : 'text-foreground hover:text-accent-foreground hover:bg-muted'
                   }`}
                 >
                   {link.label}
@@ -84,7 +84,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="mx-4 bg-yellow-400 text-gray-900 px-6 py-2 rounded text-center hover:bg-yellow-500 transition-colors"
+                className="mx-4 bg-accent text-primary px-6 py-2 rounded text-center hover:brightness-90 transition-colors"
               >
                 Wycena
               </Link>
