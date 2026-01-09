@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Portfolio - Nasze Projekty Budowlane',
-  description: 'Odkryj portfolio DKW DEVELOPMENT - setki udanych projektów budowlanych. Budownictwo komercyjne, mieszkaniowe i infrastruktura w całej Polsce. Zobacz nasze realizacje.',
+  description: 'Odkryj portfolio DKW DEWELOPMENT - setki udanych projektów budowlanych. Budownictwo komercyjne, mieszkaniowe i infrastruktura w całej Polsce. Zobacz nasze realizacje.',
   openGraph: {
-    title: 'Portfolio DKW DEVELOPMENT - Nasze Projekty Budowlane',
+    title: 'Portfolio DKW DEWELOPMENT - Nasze Projekty Budowlane',
     description: 'Zobacz nasze portfolio udanych projektów budowlanych. Komercyjne, mieszkaniowe i infrastrukturalne realizacje w całej Polsce.',
   },
 };

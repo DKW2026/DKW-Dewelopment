@@ -5,9 +5,9 @@ import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
 export const metadata: Metadata = {
   title: 'Profesjonalne Usługi Budowlane',
-  description: 'DKW DEVELOPMENT - Kompleksowe usługi budowlane dla trwałego i innowacyjnego rozwoju. Budownictwo komercyjne, mieszkaniowe, renowacje i zarządzanie projektami. Ponad 400 zrealizowanych projektów.',
+  description: 'DKW DEWELOPMENT - Kompleksowe usługi budowlane dla trwałego i innowacyjnego rozwoju. Budownictwo komercyjne, mieszkaniowe, renowacje i zarządzanie projektami. Ponad 400 zrealizowanych projektów.',
   openGraph: {
-    title: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
+    title: 'DKW DEWELOPMENT - Profesjonalne Usługi Budowlane',
     description: 'Kompleksowe usługi budowlane dla trwałego i innowacyjnego rozwoju. Ponad 400 projektów, 11 lat doświadczenia.',
   },
 };
@@ -65,17 +65,17 @@ export default function Home() {
     {
       name: 'Jan Kowalski',
       role: 'Dyrektor, Tech Corp',
-      content: 'DKW DEVELOPMENT przekształcił naszą wizję w rzeczywistość. Ich dbałość o szczegóły i zaangażowanie w jakość są bezkonkurencyjne.',
+      content: 'DKW DEWELOPMENT przekształcił naszą wizję w rzeczywistość. Ich dbałość o szczegóły i zaangażowanie w jakość są bezkonkurencyjne.',
     },
     {
       name: 'Anna Nowak',
       role: 'Deweloper Nieruchomości',
-      content: 'Praca z DKW DEVELOPMENT to czysta przyjemność. Ukończyli nasz projekt na czas i przekroczyli nasze oczekiwania.',
+      content: 'Praca z DKW DEWELOPMENT to czysta przyjemność. Ukończyli nasz projekt na czas i przekroczyli nasze oczekiwania.',
     },
     {
       name: 'Michał Wiśniewski',
       role: 'Właściciel Domu',
-      content: 'Nasz wymarzony dom stał się rzeczywistością dzięki DKW DEVELOPMENT. Profesjonalizm, wydajność i prawdziwa troska.',
+      content: 'Nasz wymarzony dom stał się rzeczywistością dzięki DKW DEWELOPMENT. Profesjonalizm, wydajność i prawdziwa troska.',
     },
   ];
 
@@ -97,7 +97,7 @@ export default function Home() {
             Budujemy Marzenia w Rzeczywistość
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-            Kompleksowy Zakres Usług dla Zrównoważonego i Innowacyjnego Rozwoju
+            kompleksowy Zakres Usług Budowlanych
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -192,38 +192,6 @@ export default function Home() {
             >
               Zobacz Wszystkie Projekty <ArrowRight size={20} />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Co Mówią o Nas Nasi Klienci</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card p-8 rounded-lg shadow-md">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-5 h-5 text-accent fill-current"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6">{testimonial.content}</p>
-                <div>
-                  <div className="text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

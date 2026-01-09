@@ -62,7 +62,7 @@ export default function Contact() {
     {
       icon: Clock,
       title: 'Godziny Pracy',
-      details: ['Pon - Pt: 8:00 - 18:00', 'Sob: 9:00 - 14:00'],
+      details: ['Pon - Pt: 9:00 - 17:00'],
     },
   ];
 
@@ -73,8 +73,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Skontaktuj się z Nami</h1>
           <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-            Gotowy do rozpoczęcia projektu budowlanego? Skontaktuj się z nami już dziś i porozmawiajmy o tym,
-            jak możemy pomóc wcielić Twoją wizję w życie
+            Gotowy do rozpoczęcia projektu budowlanego? Skontaktuj się z nami już dziś!
           </p>
         </div>
       </section>
@@ -273,50 +272,6 @@ export default function Contact() {
                   <p className="text-sm">ul. Budowlana 123, Warszawa 00-001</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Często Zadawane Pytania</h2>
-          </div>
-
-          <div className="space-y-6">
-            <div className="border-b pb-6">
-              <h3 className="text-xl font-semibold mb-2">Jak długo trwa typowy projekt?</h3>
-              <p className="text-muted-foreground">
-                Terminy projektów różnią się w zależności od zakresu i złożoności. Projekty mieszkaniowe
-                zazwyczaj trwają 3-6 miesięcy, podczas gdy projekty komercyjne mogą trwać 6-18 miesięcy.
-                Szczegółowe harmonogramy przedstawiamy podczas konsultacji.
-              </p>
-            </div>
-
-            <div className="border-b pb-6">
-              <h3 className="text-xl font-semibold mb-2">Czy oferujecie opcje finansowania projektów?</h3>
-              <p className="text-muted-foreground">
-                Tak, współpracujemy z kilkoma partnerami finansowymi, aby pomóc uczynić Twój projekt
-                przystępnym cenowo. Skontaktuj się z nami, aby omówić dostępne opcje finansowania.
-              </p>
-            </div>
-
-            <div className="border-b pb-6">
-              <h3 className="text-xl font-semibold mb-2">Czy posiadacie licencje i ubezpieczenie?</h3>
-              <p className="text-muted-foreground">
-                Oczywiście. Jesteśmy w pełni licencjonowani, kaucjonowani i ubezpieczeni. Możemy
-                dostarczyć kopie naszych dokumentów na żądanie.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Jakie obszary obsługujecie?</h3>
-              <p className="text-muted-foreground">
-                Głównie obsługujemy Warszawę i okolice, ale jesteśmy otwarci na omówienie
-                projektów w innych lokalizacjach indywidualnie.
-              </p>
             </div>
           </div>
         </div>

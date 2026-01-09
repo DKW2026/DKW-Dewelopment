@@ -79,19 +79,6 @@ export default function Portfolio() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Podróż ku Doskonałości
-          </h1>
-          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-            Odkryj nasze portfolio udanych projektów, które pokazują nasze zaangażowanie w jakość,
-            innowacje i doskonałość w budownictwie
-          </p>
-        </div>
-      </section>
-
       {/* Filter Section */}
       <section className="py-8 bg-background border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

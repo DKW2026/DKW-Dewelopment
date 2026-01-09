@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-accent flex items-center justify-center">
                 <span className="text-2xl font-bold text-primary">C</span>
               </div>
-              <span className="text-xl font-bold">DKW DEVELOPMENT</span>
+              <span className="text-xl font-bold">DKW DEWELOPMENT</span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Budujemy marzenia w rzeczywistość z doskonałością i innowacją od 2010 roku.
@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/70">
-          <p>&copy; {new Date().getFullYear()} DKW DEVELOPMENT. Wszelkie prawa zastrzeżone.</p>
+          <p>&copy; {new Date().getFullYear()} DKW DEWELOPMENT. Wszelkie prawa zastrzeżone.</p>
         </div>
       </div>
     </footer>

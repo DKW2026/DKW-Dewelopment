@@ -12,7 +12,6 @@ export default function Navigation() {
   const navLinks = [
     { path: '/', label: 'Strona Główna' },
     { path: '/portfolio', label: 'Portfolio' },
-    { path: '/about', label: 'O Nas' },
     { path: '/contact', label: 'Kontakt' },
   ];
 
@@ -27,7 +26,7 @@ export default function Navigation() {
             <div className="w-10 h-10 bg-accent flex items-center justify-center">
               <span className="text-2xl font-bold text-primary">C</span>
             </div>
-            <span className="text-xl font-bold text-foreground">DKW DEVELOPMENT</span>
+            <span className="text-xl font-bold text-foreground">DKW DEWELOPMENT</span>
           </Link>
 
           {/* Desktop Navigation */}

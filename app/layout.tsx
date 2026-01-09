@@ -8,14 +8,14 @@ import './styles/index.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://buildnext.pl'),
   title: {
-    default: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane | Budownictwo Komercyjne i Mieszkaniowe',
-    template: '%s | DKW DEVELOPMENT'
+    default: 'DKW DEWELOPMENT - Profesjonalne Usługi Budowlane | Budownictwo Komercyjne i Mieszkaniowe',
+    template: '%s | DKW DEWELOPMENT'
   },
-  description: 'DKW DEVELOPMENT to wiodąca firma budowlana specjalizująca się w budownictwie komercyjnym, mieszkaniowym oraz renowacjach. Ponad 400 zrealizowanych projektów i 11 lat doświadczenia.',
+  description: 'DKW DEWELOPMENT to wiodąca firma budowlana specjalizująca się w budownictwie komercyjnym, mieszkaniowym oraz renowacjach. Ponad 400 zrealizowanych projektów i 11 lat doświadczenia.',
   keywords: ['firma budowlana', 'budownictwo komercyjne', 'budownictwo mieszkaniowe', 'renowacje', 'zarządzanie projektami budowlanymi', 'budowa domów', 'budowa biurowców', 'usługi budowlane Polska'],
-  authors: [{ name: 'DKW DEVELOPMENT' }],
-  creator: 'DKW DEVELOPMENT',
-  publisher: 'DKW DEVELOPMENT',
+  authors: [{ name: 'DKW DEWELOPMENT' }],
+  creator: 'DKW DEWELOPMENT',
+  publisher: 'DKW DEWELOPMENT',
   formatDetection: {
     email: false,
     address: false,
@@ -25,21 +25,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pl_PL',
     url: 'https://buildnext.pl',
-    siteName: 'DKW DEVELOPMENT',
-    title: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
+    siteName: 'DKW DEWELOPMENT',
+    title: 'DKW DEWELOPMENT - Profesjonalne Usługi Budowlane',
     description: 'Wiodąca firma budowlana w Polsce. Budownictwo komercyjne, mieszkaniowe i renowacje. Ponad 400 projektów, 11 lat doświadczenia.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
+        alt: 'DKW DEWELOPMENT - Profesjonalne Usługi Budowlane',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DKW DEVELOPMENT - Profesjonalne Usługi Budowlane',
+    title: 'DKW DEWELOPMENT - Profesjonalne Usługi Budowlane',
     description: 'Wiodąca firma budowlana w Polsce. Budownictwo komercyjne, mieszkaniowe i renowacje.',
     images: ['/og-image.jpg'],
   },
