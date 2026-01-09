@@ -58,7 +58,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-primary-foreground mt-1 shrink-0" />
-                <span className="text-primary-foreground/70">ul. St. Leszczyńskiego 4/10, Wrocław 50-078</span>
+                <span className="text-primary-foreground/70">ul. St. Leszczyńskiego 4/29, Wrocław 50-078</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-primary-foreground shrink-0" />

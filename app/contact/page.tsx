@@ -48,7 +48,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Odwiedź Nas',
-      details: ['ul. St. Leszczyńskiego 4/10', 'Wrocław 50-078'],
+      details: ['ul. St. Leszczyńskiego 4/29', 'Wrocław 50-078'],
     },
     {
       icon: Phone,
@@ -217,7 +217,7 @@ export default function Contact() {
             {/* Construction Image */}
             <div className="relative h-full min-h-150 rounded-lg overflow-hidden">
               <Image
-                src="/excav.jpg"
+                src="/excav_2.webp"
                 alt="Construction site"
                 fill
                 className="object-cover"
