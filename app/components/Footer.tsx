@@ -45,8 +45,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Usługi</h3>
             <ul className="space-y-2 text-primary-foreground/70">
-              <li>Budownictwo Komercyjne</li>
-              <li>Budownictwo Mieszkaniowe</li>
+              <li>Budownictwo Kubaturowe</li>
+              <li>Budownictwo Infrastrukturalne</li>
               <li>Usługi Remontowe</li>
               <li>Zarządzanie Projektami</li>
             </ul>

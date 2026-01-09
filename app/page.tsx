@@ -16,12 +16,12 @@ export default function Home() {
   const services = [
     {
       icon: Building2,
-      title: 'Budownictwo Komercyjne',
+      title: 'Budownictwo Kubaturowe',
       description: 'Wielkoskalowe projekty komercyjne realizowane z precyzją i wydajnością',
     },
     {
       icon: Users,
-      title: 'Budownictwo Mieszkaniowe',
+      title: 'Budownictwo Infrastrukturalne',
       description: 'Tworzymy wymarzone domy z dbałością o każdy szczegół',
     },
     {
