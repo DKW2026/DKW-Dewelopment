@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -47,17 +48,17 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Odwiedź Nas',
-      details: ['ul. Budowlana 123', 'Warszawa 00-001'],
+      details: ['ul. St. Leszczyńskiego 4/10', 'Wrocław 50-078'],
     },
     {
       icon: Phone,
       title: 'Zadzwoń',
-      details: ['+48 555 123 456', '+48 555 987 654'],
+      details: ['+48 797 037 567'],
     },
     {
       icon: Mail,
       title: 'Napisz do Nas',
-      details: ['info@buildnext.pl', 'wsparcie@buildnext.pl'],
+      details: ['wroclaw.dkw@gmail.com'],
     },
     {
       icon: Clock,
@@ -151,7 +152,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none"
-                      placeholder="+48 555 123 456"
+                      placeholder="+48 797 037 567"
                     />
                   </div>
                 </div>
@@ -213,64 +214,19 @@ export default function Contact() {
               </form>
             </div>
 
-            {/* Map / Additional Info */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Dlaczego Warto się z Nami Skontaktować?</h2>
-                <div className="space-y-4">
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                      <span className="text-primary">✓</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-1">Darmowa Konsultacja</h3>
-                      <p className="text-muted-foreground">
-                        Uzyskaj profesjonalną poradę i wycenę projektu bez żadnych kosztów
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                      <span className="text-primary">✓</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-1">Szybka Odpowiedź</h3>
-                      <p className="text-muted-foreground">Zazwyczaj odpowiadamy w ciągu 24 godzin</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                      <span className="text-primary">✓</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-1">Przejrzyste Ceny</h3>
-                      <p className="text-muted-foreground">Jasne, szczegółowe wyceny bez ukrytych opłat</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                      <span className="text-primary">✓</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-1">Doświadczony Zespół</h3>
-                      <p className="text-muted-foreground">
-                        Pracuj z ekspertami branżowymi o udokumentowanych osiągnięciach
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="bg-muted h-80 rounded-lg flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin size={48} className="mx-auto mb-2" />
-                  <p>Lokalizacja na Mapie</p>
-                  <p className="text-sm">ul. Budowlana 123, Warszawa 00-001</p>
-                </div>
+            {/* Construction Image */}
+            <div className="relative h-full min-h-150 rounded-lg overflow-hidden">
+              <Image
+                src="/excav.jpg"
+                alt="Construction site"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-primary/60 flex items-center justify-center">
+                <h2 className="text-4xl md:text-5xl font-bold text-white text-center px-6">
+                  DKW DEWELOPMENT
+                </h2>
               </div>
             </div>
           </div>

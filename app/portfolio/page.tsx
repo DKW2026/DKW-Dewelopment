@@ -65,13 +65,6 @@ export default function Portfolio() {
     },
   ];
 
-  const categories = [
-    { id: 'all', label: 'Wszystkie Projekty' },
-    { id: 'commercial', label: 'Komercyjne' },
-    { id: 'residential', label: 'Mieszkaniowe' },
-    { id: 'infrastructure', label: 'Infrastruktura' },
-  ];
-
   const filteredProjects =
     filter === 'all'
       ? projects
@@ -79,27 +72,6 @@ export default function Portfolio() {
 
   return (
     <div>
-      {/* Filter Section */}
-      <section className="py-8 bg-background border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setFilter(category.id)}
-                className={`px-6 py-2 rounded transition-colors font-medium ${
-                  filter === category.id
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-muted text-foreground hover:bg-muted/80'
-                }`}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Projects Grid */}
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

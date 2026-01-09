@@ -36,13 +36,6 @@ export default function Home() {
     },
   ];
 
-  const stats = [
-    { value: '400+', label: 'Zrealizowanych Projektów' },
-    { value: '11+', label: 'Lat Doświadczenia' },
-    { value: '90+', label: 'Członków Zespołu' },
-    { value: '100%', label: 'Zadowolenie Klientów' },
-  ];
-
   const projects = [
     {
       title: 'Nowoczesny Kompleks Biurowy',
@@ -137,20 +130,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl mb-2">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl mb-2 font-bold">{stat.value}</div>
-                <div className="text-primary-foreground/80">{stat.label}</div>
               </div>
             ))}
           </div>
