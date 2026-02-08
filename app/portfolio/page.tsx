@@ -1,77 +1,105 @@
-'use client';
+"use client";
 
-import type { Metadata } from 'next';
-import { useState } from 'react';
-import Link from 'next/link';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { useState } from "react";
+import Link from "next/link";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel";
 
+// TODO: Sent mail to wroclaw.dkw@gmail.com
 export default function Portfolio() {
-  const [filter, setFilter] = useState('all');
-
+  const [filter, setFilter] = useState("all");
+  const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
   const projects = [
     {
       id: 1,
-      title: 'Nowoczesny Kompleks Biurowy',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1714601344981-75e003bc5d18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGdsYXNzfGVufDF8fHx8MTc2NjIzMjkxNnww&ixlib=rb-4.1.0&q=80&w=1080',
-      description: 'Najnowocześniejszy budynek biurowy z nowoczesnymi udogodnieniami',
-      location: 'Warszawa',
-      year: '2024',
-    },
-    {
-      id: 2,
-      title: 'Luksusowa Willa Mieszkalna',
-      category: 'residential',
-      image: 'https://images.unsplash.com/photo-1724688078741-6d89e587e809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3VzZSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjYyMzI5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description: 'Elegancka nowoczesna willa z panoramicznymi widokami',
-      location: 'Kraków',
-      year: '2024',
+      title: "Budowa Magazynu i Pomieszczenia Logistycznego",
+      category: "commercial",
+      images: [
+        "/konstrukcja-stalowa.webp",
+        "/konstrukcja-stalowa-2.webp",
+        "/konstrukcja-stalowa-3.webp",
+        "/konstrukcja-stalowa-4.webp",
+      ],
+      description:
+        "Budowa nowego magazynu i pomieszczenia logistycznego. Wykonanie konstrukcji stalowych pod regały systemowe, montaż instalacji elektrycznych pod zasilanie elementów automatyki.",
+      location: "Barlinek, Województwo Zachodniopomorskie",
     },
     {
       id: 3,
-      title: 'Budynek Komercyjny',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1764983266679-751a8bbb54d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tZXJjaWFsJTIwYnVpbGRpbmclMjBleHRlcmlvcnxlbnwxfHx8fDE3NjYxNTY3MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description: 'Wielofunkcyjna przestrzeń komercyjna w doskonałej lokalizacji',
-      location: 'Wrocław',
-      year: '2023',
-    },
-    {
-      id: 4,
-      title: 'Nowoczesna Architektura',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1695067440629-b5e513976100?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBidWlsZGluZyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjYxMzkzODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description: 'Współczesny projekt z innowacyjnymi rozwiązaniami',
-      location: 'Gdańsk',
-      year: '2023',
+      title: "Budynek Komercyjny",
+      category: "commercial",
+      images: ["/droga-1.webp", "/droga-2.webp"],
+      description:
+        "Przebudowa drogi między miejscowościami Wiry i Wirki w zakresie zmiany nawierzchni asfaltowej, budowy chodników oraz zagospodarowania terenu przyległego.",
+      location: "Wiry, Województwo Dolnośląskie",
     },
     {
       id: 5,
-      title: 'Budownictwo Mieszkaniowe',
-      category: 'residential',
-      image: 'https://images.unsplash.com/photo-1715231667593-5a32b2828546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNpZGVudGlhbCUyMGhvdXNlJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc2NjE3NzQ2M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      description: 'Nowa inwestycja mieszkaniowa',
-      location: 'Poznań',
-      year: '2024',
+      title: "Współczesny projekt z innowacyjnymi rozwiązaniami ",
+      category: "commercial",
+      images: [""],
+      description:
+        "Zabezpieczenie przeciwpowodziowe rzeki Iny, zabezpieczenie przeciwpowodziowe miasta Stargard",
+      location: "Stargard, Województwo Zachodniopomorskie",
     },
     {
       id: 6,
-      title: 'Plac Budowy',
-      category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1757163565776-d0f3beac79bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwbWFjaGluZXJ5fGVufDF8fHx8MTc2NjIzMjkxNnww&ixlib=rb-4.1.0&q=80&w=1080',
-      description: 'Wielkoskalowy rozwój infrastruktury',
-      location: 'Łódź',
-      year: '2023',
+      title: "Współczesny projekt z innowacyjnymi rozwiązaniami",
+      category: "commercial",
+      images: ["/chodnik-1.jpg", "/chodnik-2.webp", "/chodnik-3.webp"],
+      description:
+        "Rozbudowa i przebudowa oraz termomodernizacja żłobka miejskiego w Dzierźżoniowie.",
+      location: "Dzierżoniów, Województwo Dolnośląskie",
     },
   ];
 
   const filteredProjects =
-    filter === 'all'
+    filter === "all"
       ? projects
       : projects.filter((project) => project.category === filter);
 
   return (
     <div>
+      {/* Fullscreen Image Modal */}
+      {fullscreenImage && (
+        <div
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
+          onClick={() => setFullscreenImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+            onClick={() => setFullscreenImage(null)}
+          >
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <div className="max-w-7xl max-h-full w-full h-full flex items-center justify-center">
+            <ImageWithFallback
+              src={fullscreenImage}
+              alt="Fullscreen view"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+        </div>
+      )}
+
       {/* Projects Grid */}
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,22 +109,47 @@ export default function Portfolio() {
                 key={project.id}
                 className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer"
               >
-                <div className="relative h-64 overflow-hidden">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
+                <div className="relative h-64">
+                  <Carousel className="w-full h-full">
+                    <CarouselContent className="h-64">
+                      {project.images.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <div
+                            className="h-64 cursor-pointer"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setFullscreenImage(image);
+                            }}
+                          >
+                            <ImageWithFallback
+                              src={image}
+                              alt={`${project.title} - Image ${index + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                  </Carousel>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-primary uppercase font-semibold">
-                      {project.category === 'commercial' ? 'Komercyjne' : project.category === 'residential' ? 'Mieszkaniowe' : 'Infrastruktura'}
+                      {project.category === "commercial"
+                        ? "Komercyjne"
+                        : project.category === "residential"
+                          ? "Mieszkaniowe"
+                          : "Infrastruktura"}
                     </span>
-                    <span className="text-sm text-muted-foreground">{project.year}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <svg
                       className="w-4 h-4 mr-2"
@@ -129,10 +182,12 @@ export default function Portfolio() {
       {/* CTA Section */}
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Od Koncepcji do Realizacji</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Od Koncepcji do Realizacji
+          </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            To są nasze osiągnięcia. Pozwól nam pomóc wcielić Twoją wizję w życie dzięki naszej wiedzy
-            i zaangażowaniu.
+            To są nasze osiągnięcia. Pozwól nam pomóc wcielić Twoją wizję w
+            życie dzięki naszej wiedzy i zaangażowaniu.
           </p>
           <Link
             href="/contact"
